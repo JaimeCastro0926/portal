@@ -1,0 +1,21 @@
+{% extends "GestionDocente/base.html"%}
+{% load static %}
+{% block content %}
+{% load crispy_forms_tags %}
+<div class="col-6 col-md-3 offset-4">
+  <div class="card-body">
+    <div class="card">
+
+    </div>
+    <h2 style="color: white;font-size: 2cm;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">  Historico </h2>
+    <br>
+    <form enctype="multipart/form-data" method="post" action="" style="color: white;">
+    {% csrf_token %}
+    
+    {{form|crispy}}
+    <button type="submit" class="btn btn-succes"> Enviar </button >
+    </div>
+    </form>
+
+  </div>
+{%endblock%}

@@ -1,0 +1,115 @@
+{% extends "GestionDocente/base.html"%}
+{% load static %}
+{% block content %}
+
+    {% if request.user.is_authenticated %}
+
+    <div class="card-deck">
+      <div class="card" style="width: 18rem; ;">
+        <img class="card-img-top" src="{% static 'GestionDocente/img/imagen2.jpg'%}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  ">Documentos</h5>
+          <p class="card-text">Puedes ingresar con tu correo institucional y acceder a los documentos institucionales</p>
+          <br>
+          <a href="https://drive.google.com/drive/folders/1E_7muTFmdl86aaEbGL5580OkP5pQGBYo?usp=share_link" target="_blank" rel="noopener noreferrer" class="btn btn-primary"> Ver </a>
+        </div>
+      </div>
+  
+      <div class="card" style="width: 18rem; ;">
+        <img class="card-img-top" src="{% static 'GestionDocente/img/imagen11.jpg'%}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Virtual CIM - Moodle</h5>
+          <p class="card-text">En esta aplicacion podrás agregar el material de trabajo semana a semana, realzar evaluaciones y crear trabajos para desarrollar en casa</p>
+          <a href="http://190.26.57.26/virtualcim/login/index.php" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ir </a>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem; ;">
+        <img class="card-img-top" src="{% static 'GestionDocente/img/imagen12.jpg'%}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Logro e indicadores</h5>
+          <p class="card-text">Puedes agregar información pertinente de los Logros e indicadores</p>
+          <br>
+          <a href="/admin" class="btn btn-primary">Llenar Indicadores</a>
+        </div>
+      </div>
+    </div>
+    <div>
+      <BR>
+    </div>
+
+    <div class="card-deck">
+      <div class="card" style="width: 18rem; ;">
+        <img class="card-img-top" src="{% static 'GestionDocente/img/imagen5.jpg'%}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Historico</h5>
+          <p class="card-text">Puedes agregar información pertinente de los estudiantes, ya sea academica o emocional</p>
+          <a href="{% url 'historico'%}" class="btn btn-primary">Llenar historico</a>
+          <a href="{% url 'historico_list'%}" class="btn btn-primary">Ver historico </a>
+        </div>
+      </div>
+  
+      <div class="card" style="width: 18rem; ;">
+        <img class="card-img-top" src="{% static 'GestionDocente/img/imagen6.jpg'%}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Vacio </h5>
+          <!-- <p class="card-text">Puedes agregar información pertinente de los estudiantes, ya sea academica o emocional</p>
+          <a href="#" class="btn btn-primary">Vacio  </a>
+          <a href=" 3" class="btn btn-primary">Ver </a>  -->
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem; ;">
+        <img class="card-img-top" src="{% static 'GestionDocente/img/imagen7.jpg'%}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 
+            Vacio </h5>
+          <!-- <p class="card-text">Puedes agregar información pertinente de los estudiantes, ya sea academica o emocional</p>
+          <a href="{% url 'hojavidaestudiante'%}" class="btn btn-primary">Vacio</a> -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+    
+    <!-- <ul style="color: white">
+      <li>Academico
+        <ul>
+          <li>
+            <a href="{% url 'hojavidaestudiante'%}">  de vida estudiantil </a> 
+          </li>
+          <li>Historico</li>
+          <li>Indicador de desempeños </li>
+        </ul>
+      </li>
+    </ul> -->
+
+    <!-- <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            {{profesor.Nombre}}
+          </div>
+          <div class="col-sm">
+            {{profesor.Apellido}}
+          </div>
+          <div class="col-sm">
+            {{profesor.Email}}
+          </div>
+        </div>
+      </div> -->
+
+   
+
+    {% for curso in curso %}
+    <div><p>
+       <h2>{{curso.Nombre}} </h2>
+   </div>
+   {% endfor %}
+
+
+   {% else %}
+    <center> <h1 style="color: white; align-self: center; "> Logeate por favor</h1>    </center> 
+   {% endif %}
+{%endblock%}

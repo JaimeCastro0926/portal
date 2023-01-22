@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/0ff73554-89f5-4c7b-ad3b-b91812897532/AppServices/subscriptions/0ff73554-89f5-4c7b-ad3b-b91812897532/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/portalcim",
+    "appService.deploySubpath": "."
+}

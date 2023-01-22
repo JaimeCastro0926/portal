@@ -1,0 +1,40 @@
+{% extends "GestionDocente/base.html"%}
+{% load static %}
+{% block content %}
+
+<center>
+
+<table class="table-light">
+  <tr class="table table-center">
+    <th>Profesor</th>
+    <th>Estudiante</th>
+    <th>Fecha</th>
+    <th>Hora</th>
+    <th>Clasificacion</th>
+    <th>Comentario_Docente</th>
+    <th>Comentario_Estudiante</th>
+    <th>FaltaTipo</th>
+    <th>Compromiso_de_Estudiante</th>
+    <th>Puntos_negativos</th>
+    
+  </tr>
+
+  {% for l in lista_historico %}
+  <tr class="table table-center" style="align-self: center;">
+    <td scope="col" style="align-content: flex-end;">{{l.Profesor| title }}</th>
+    <td scope="col" style="align-content: center;">{{l.Estudiante }}</th>
+    <td scope="col" style="align-content: center;">{{l.Fecha }}</th>
+    <td scope="col" style="align-content: center;">{{l.Hora }}</th>
+    <td scope="col" style="align-content: stretch;">{{l.Clasificacion}}</th>
+    <td scope="col" style="align-content: center;">{{l.Comentario_Docente}}</th>
+    <td scope="col" style="align-content: center;">{{l.Comentario_Estudiante }}</th>
+    <td scope="col" style="align-content: center;">{{l.FaltaTipo}}</th>
+    <td scope="col" style="align-content: center;">{{l.Compromiso_de_Estudiante }}</th>
+    <td scope="col" style="align-content: center;">{{l.Puntos_negativos}}</th>
+    
+  </tr> 
+  {% endfor %}
+</table> 
+</div>
+</center>
+{%endblock%}
