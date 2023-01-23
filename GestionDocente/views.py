@@ -48,7 +48,7 @@ class Vregistro(View):
 
     def post(self, request):
         form = UserCreationForm(request.POST)
-
+        is_superuser=0;
         if form.is_valid():
             usuario = form.save()
             login(request, usuario)
