@@ -2,23 +2,35 @@
 {% load static %}
 {%block content %}
 
-{% for profesor in profesor %}
-
-<div class="container">
-    <div class="row">
-      <div class="col-sm">
-        {{profesor.Nombre}}
-      </div>
-      <div class="col-sm">
-        {{profesor.Apellido}}
-      </div>
-      <div class="col-sm">
-        {{profesor.Email}}
-      </div>
+<div class="card-deck">
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen2.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;  "> Informate </h5>
+      <p class="card-text">Puedes Ver Información de la gestión académica y emocional</p>
+      <br>
+      <a href="{% url 'estudiante'%}" target="_blank" rel="noopener noreferrer" class="btn btn-primary"> Ver </a>
     </div>
   </div>
 
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen4.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Virtual CIM - Moodle</h5>
+      <p class="card-text">En esta aplicacion podrás ver material de trabajo semana a semana, realzar evaluaciones y trabajos para desarrollar en casa</p>
+      <a href="http://190.26.57.26/virtualcim/login/index.php" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Ir </a>
+    </div>
+  </div>
 
-{% endfor %}
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen5.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Servicios </h5>
+      <p class="card-text">Puedes ver información de rutas, restaurantes y Natación</p>
+      <br>
+      <a href="https://integracionmoderna.edu.co/" class="btn btn-primary">Ver SErvicios</a>
+    </div>
+  </div>
+</div>
 
 {%endblock%}
