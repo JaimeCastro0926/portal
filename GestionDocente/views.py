@@ -83,7 +83,7 @@ def historico(request):
             data["form"] = formulario
 
     messages.info(request,"Guardado con exito")
-    return render(request, "GestionDocente/historico.html", {'formulario':formulario})
+    return render(request, "GestionDocente/historico.html", data)
 
 def listar_historico(request):
     lista_historico = Historico.objects.all()
