@@ -22,15 +22,15 @@
   {% for l in lista_historico %}
   <tr class="table table-center" style="align-self: center;">
     <td scope="col" style="align-content: flex-end;">{{l.Profesor| title }}</th>
-    <td scope="col" style="align-content: center;">{{l.Estudiante }}</th>
-    <td scope="col" style="align-content: center;">{{l.Fecha }}</th>
-    <td scope="col" style="align-content: center;">{{l.Hora }}</th>
-    <td scope="col" style="align-content: stretch;">{{l.Clasificacion}}</th>
-    <td scope="col" style="align-content: center;">{{l.Comentario_Docente}}</th>
-    <td scope="col" style="align-content: center;">{{l.Comentario_Estudiante }}</th>
-    <td scope="col" style="align-content: center;">{{l.FaltaTipo}}</th>
-    <td scope="col" style="align-content: center;">{{l.Compromiso_de_Estudiante }}</th>
-    <td scope="col" style="align-content: center;">{{l.Puntos_negativos}}</th>
+    <td scope="col" style="align-content: flex-end;">{{l.Estudiante }}</th>
+    <td scope="col" style="align-content: flex-end;">{{l.Fecha }}</th>
+    <td scope="col" style="align-content: flex-end;">{{l.Hora }}</th>
+    <td scope="col" style="align-content: flex-end;">{{l.Clasificacion}}</th>
+    <td scope="col" style="align-content: flex-end;">{{l.Comentario_Docente}}</th>
+    <td scope="col" style="align-content: flex-end;">{{l.Comentario_Estudiante }}</th>
+    <td scope="col" style="align-content: flex-end;">{{l.FaltaTipo}}</th>
+    <td scope="col" style="align-content: flex-end;">{{l.Compromiso_de_Estudiante }}</th>
+    <td scope="col" style="align-content: flex-end;">{{l.Puntos_negativos}}</th>
     
   </tr> 
   {% endfor %}
