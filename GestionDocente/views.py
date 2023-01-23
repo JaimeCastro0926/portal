@@ -26,7 +26,7 @@ def logear(request):
             usuario=authenticate(username=nombre_usuario, password=contra)
             if usuario is not None:
                 login(request, usuario)
-                return redirect('Home')
+                return redirect('Docente')
             
             else:
                 messages.error(request,"Usuario no existe")
@@ -86,12 +86,9 @@ def historico(request):
     return render(request, "GestionDocente/historico.html", data)
 
 def listar_historico(request):
-
     lista_historico = Historico.objects.all()
     data = {
         'lista_historico':lista_historico
     }
- 
-    
     context ={'lista_historico':lista_historico}
     return render(request, "GestionDocente/historico_list.html", context )
