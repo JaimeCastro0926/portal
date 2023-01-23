@@ -41,24 +41,24 @@ def logear(request):
 def estudiante(request):    
     return render(request, "GestionDocente/estudiante.html")
 
-# class Vregistro(View):    
-#     def get(self, request):
-#         form = UserCreationForm()
-#         return render(request, "GestionDocente/registro.html",{"form":form})
+class Vregistro(View):    
+    def get(self, request):
+        form = UserCreationForm()
+        return render(request, "GestionDocente/registro.html",{"form":form})
 
-#     def post(self, request):
-#         form = UserCreationForm(request.POST)
-#         is_superuser=0;
-#         if form.is_valid():
-#             usuario = form.save()
-#             login(request, usuario)
-#             return redirect('Home')
+    def post(self, request):
+        form = UserCreationForm(request.POST)
+        is_superuser=0;
+        if form.is_valid():
+            usuario = form.save()
+            login(request, usuario)
+            return redirect('Home')
 
-#         else :
-#             for msg in form.error_messages:
-#                 messages.error(request, form.error_messages[msg])
+        else :
+            for msg in form.error_messages:
+                messages.error(request, form.error_messages[msg])
 
-#             return render(request, "GestionDocente/registro.html",{"form":form})
+            return render(request, "GestionDocente/registro.html",{"form":form})
 
 def cerrar_sesion(request):
     logout(request)
