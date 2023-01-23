@@ -100,6 +100,7 @@ DATABASES = {
          'PASSWORD': os.environ["PGPASSWORD"],
          'HOST': os.environ["PGHOST"],
          'PORT': os.environ["PGPORT"],
+         'TIME_ZONE' : 'UTC'
      }
  }
 
