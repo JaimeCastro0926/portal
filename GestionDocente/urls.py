@@ -18,6 +18,7 @@ urlpatterns = [
     path('historico_list', views.listar_historico, name="historico_list"),
     path('gestion', views.gestion, name="gestion"),
     path('club', views.club, name="club"),
+    path('einformacion', views.einformacion, name="einformacion"),
    
 
 
