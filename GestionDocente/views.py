@@ -41,6 +41,15 @@ def logear(request):
 def estudiante(request):    
     return render(request, "GestionDocente/estudiante.html")
 
+def estudiante(request):    
+    return render(request, "GestionDocente/estudiante.html")
+
+def gestion(request):    
+    return render(request, "GestionDocente/gestion.html")
+
+def club(request):    
+    return render(request, "GestionDocente/club.html")
+
 class Vregistro(View):    
     def get(self, request):
         form = UserCreationForm()
