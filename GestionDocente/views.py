@@ -50,6 +50,9 @@ def club(request):
 def einformacion(request):    
     return render(request, "GestionDocente/einformacion.html")
 
+def servicios(request):    
+    return render(request, "GestionDocente/servicios.html")
+
 class Vregistro(View):    
     def get(self, request):
         form = UserCreationForm()
