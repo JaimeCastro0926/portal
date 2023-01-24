@@ -13,6 +13,9 @@ from .models import Historico
 def home(request):
     return render(request, "GestionDocente/home.html")
 
+def servicios(request):    
+    return render(request, "GestionDocente/servicios.html")
+
 def docente(request):
     profesor=Profesor.objects.all()
     return render(request, "GestionDocente/docente.html",{"profesor":profesor})
@@ -48,8 +51,6 @@ def club(request):
 def einformacion(request):    
     return render(request, "GestionDocente/einformacion.html")
 
-def servicios(request):    
-    return render(request, "GestionDocente/servicios.html")
 
 class Vregistro(View):    
     def get(self, request):
