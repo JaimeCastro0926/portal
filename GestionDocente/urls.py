@@ -19,6 +19,10 @@ urlpatterns = [
     path('gestion', views.gestion, name="gestion"),
     path('club', views.club, name="club"),
     path('einformacion', views.einformacion, name="einformacion"),
+    path('servicios', views.servicios, name="servicios"),
+    path('natacion', views.natacion, name="natacion"),
+    path('rutas', views.rutas, name="rutas"),
+    path('restaurante', views.resturante, name="restaurante"),
    
 
 
