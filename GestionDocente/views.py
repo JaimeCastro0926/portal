@@ -36,8 +36,6 @@ def logear(request):
     form = AuthenticationForm()
     return render(request,"GestionDocente/login.html", {"form":form} )
 
-
-
 def estudiante(request):    
     return render(request, "GestionDocente/estudiante.html")
 
