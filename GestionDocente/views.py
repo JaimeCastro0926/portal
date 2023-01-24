@@ -16,6 +16,20 @@ def home(request):
 def servicios(request):    
     return render(request, "GestionDocente/servicios.html")
 
+
+def servicios(request):    
+    return render(request, "GestionDocente/servicios.html")
+
+def natacion(request):    
+    return render(request, "GestionDocente/natacion.html")
+
+def rutas(request):    
+    return render(request, "GestionDocente/rutas.html")
+
+def restaurante(request):    
+    return render(request, "GestionDocente/restaurante.html")
+
+
 def docente(request):
     profesor=Profesor.objects.all()
     return render(request, "GestionDocente/docente.html",{"profesor":profesor})
