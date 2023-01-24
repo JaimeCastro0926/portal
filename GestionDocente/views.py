@@ -41,9 +41,6 @@ def logear(request):
 def estudiante(request):    
     return render(request, "GestionDocente/estudiante.html")
 
-def estudiante(request):    
-    return render(request, "GestionDocente/estudiante.html")
-
 def gestion(request):    
     return render(request, "GestionDocente/gestion.html")
 
