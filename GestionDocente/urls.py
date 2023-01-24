@@ -16,8 +16,8 @@ urlpatterns = [
     path('hojavidaestudiante', views.hojavidaestudiante, name="hojavidaestudiante"),
     path('historico', views.historico, name="historico"),
     path('historico_list', views.listar_historico, name="historico_list"),
-    path('gestion', views.listar_historico, name="gestion"),
-    path('club', views.listar_historico, name="club"),
+    path('gestion', views.gestion, name="gestion"),
+    path('club', views.club, name="club"),
    
 
 
