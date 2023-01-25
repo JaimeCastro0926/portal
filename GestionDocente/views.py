@@ -98,7 +98,7 @@ def historico(request):
         if formulario.is_valid():
             formulario.save()           
             messages.info(request,"Guardado con exito")
-    return render(request, "GestionDocente/docente.html", {"formulario":formulario} )
+    return render(request, "GestionDocente/historico_list.html")
 
 
 def listar_historico(request):
