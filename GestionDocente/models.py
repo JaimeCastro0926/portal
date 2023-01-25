@@ -153,8 +153,8 @@ class Psicoorientacion(models.Model):
     Colsulta_tipo= models.CharField(max_length=15)
     Compromiso_de_Estudiante=models.TextField(max_length=500,null=True, blank=True)
     Recurrente= models.BooleanField(default=False)
-    Proxima_cita= models.DateField(null=True)
-    Evidencias = models.ImageField(upload_to="PSICOLOGIA",null=True)
+    Proxima_cita= models.DateField(null=True, blank=True)
+    Evidencias = models.ImageField(upload_to="PSICOLOGIA",null=True, blank=True)
     
 Mensiones =[
     (1, "Academico"),
