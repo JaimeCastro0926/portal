@@ -115,7 +115,7 @@ Falta = [
 ]
 
 class Historico(models.Model):
-    Profesor = models.ForeignKey(User,on_delete=models.CASCADE,default=User.USERNAME_FIELD)
+    Profesor = models.ForeignKey(settings.AUTH_USER_MODEL)
     Estudiante=models.ForeignKey(Estudiante,on_delete=models.CASCADE)
     Fecha=models.DateField(auto_now_add=True, auto_now=False)
     Hora = models.TimeField(auto_now_add=True, auto_now=False)
