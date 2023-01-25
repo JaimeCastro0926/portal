@@ -92,9 +92,12 @@ def cerrar_sesion(request):
 def hojavidaestudiante(request):
     return render(request, "GestionDocente/hojavidaestudiante.html")
 
+def hojavidaestudiante(request):
+    return render(request, "GestionDocente/hojavidaestudiante.html")
+
 def historico(request):
     data = {
-        'form' : Historicoform()
+        'formhistorico' : Historicoform()
     }
 
     if request.method=="POST":
@@ -105,9 +108,8 @@ def historico(request):
             data["mensaje"] = "Guardado"
             messages.info(request,"Guardado con exito")
         else :
-            data["form"] = formulario
+            data["formhistorico"] = formulario
 
-    messages.info(request,"Guardado con exito")
     return render(request, "GestionDocente/historico.html", data)
 
 
