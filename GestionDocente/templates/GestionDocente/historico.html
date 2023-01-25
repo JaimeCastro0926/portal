@@ -9,13 +9,14 @@
     </div>
     <h2 style="color: white;font-size: 2cm;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">  Historico </h2>
     <br>
-    <form enctype="multipart/form-data" method="post" action="" style="color: white;">
+    <form action="" class="formulario_historico" method="post" style="color: white;" enctype="multipart/form-data">
     {% csrf_token %}
     
-    {% crispy form %}
+    {{formhistorico | crispy}}
     <button type="submit" class="btn btn-succes"> Enviar </button >
     </div>
     </form>
+    {{mensaje}}
 
   </div>
 {%endblock%}
