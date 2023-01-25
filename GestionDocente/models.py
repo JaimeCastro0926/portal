@@ -115,7 +115,7 @@ Falta = [
 ]
 
 class Historico(models.Model):
-    Profesor = models.ForeignKey(settings.AUTH_USER_MODEL)
+    Profesor = models.ForeignKey(User,on_delete=models.CASCADE,default=User)
     Estudiante=models.ForeignKey(Estudiante,on_delete=models.CASCADE)
     Fecha=models.DateField(auto_now_add=True, auto_now=False)
     Hora = models.TimeField(auto_now_add=True, auto_now=False)
@@ -144,7 +144,7 @@ class Convivencia(models.Model):
     Puntos_negativos=models.PositiveIntegerField(default=1)
 
 class Psicoorientacion(models.Model):
-    psicoorientador = models.ForeignKey(settings.AUTH_USER_MODEL)
+    psicoorientador = models.ForeignKey(User,on_delete=models.CASCADE,default=User)
     Estudiante=models.ForeignKey(Estudiante,on_delete=models.CASCADE)
     Fecha=models.DateField(auto_now_add=True, auto_now=False)
     Hora = models.TimeField(auto_now_add=True, auto_now=False)
