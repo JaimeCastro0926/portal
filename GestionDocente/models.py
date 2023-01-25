@@ -145,7 +145,7 @@ class Convivencia(models.Model):
     Puntos_negativos=models.PositiveIntegerField(default=1)
 
 class Psicoorientacion(models.Model):
-    psicoorientador = User.objects.get(username = Self.request.user)
+    psicoorientador = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True, default=User.username)
     Estudiante=models.ForeignKey(Estudiante,on_delete=models.CASCADE)
     Fecha=models.DateField(auto_now_add=True, auto_now=False)
     Hora = models.TimeField(auto_now_add=True, auto_now=False)
