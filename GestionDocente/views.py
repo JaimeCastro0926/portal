@@ -93,17 +93,22 @@ def hojavidaestudiante(request):
     return render(request, "GestionDocente/hojavidaestudiante.html")
 
 def historico(request):
+    data = {
+        'form' : Historicoform()
+    }
+
     if request.method=="POST":
         formulario= Historicoform(request.POST, request.FILES)
-
         if formulario.is_valid():
             formulario.save()
+
+            data["mensaje"] = "Guardado"
             messages.info(request,"Guardado con exito")
         else :
-           formulario = formulario
+            data["form"] = formulario
 
-        messages.info(request,"Guardado con exito")
-    return render(request, "GestionDocente/historico.html",{"formulario":formulario})
+    messages.info(request,"Guardado con exito")
+    return render(request, "GestionDocente/historico.html", data)
 
 
 def listar_historico(request):
