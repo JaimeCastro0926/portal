@@ -62,7 +62,7 @@ TipoClubHouse =[
 class Estudiante(models.Model):
     Nombre=models.CharField(max_length=15)
     Apellido=models.CharField(max_length=15)
-    Numero_documento=models.PositiveIntegerField(default=8,null=True, blank=True)
+    Numero_documento=models.CharField(max_length=15)
     Fecha_nacimiento=models.DateField(null=True,blank=True)
     Edad=models.PositiveIntegerField(default=8,null=True, blank=True)
     Años_Antiguedad_institucion=models.PositiveIntegerField(default=1, null=True, blank=True)
