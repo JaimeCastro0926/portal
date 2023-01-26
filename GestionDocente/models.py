@@ -75,7 +75,7 @@ class Estudiante(models.Model):
     Club= models.IntegerField(null=False, blank=False, choices=TipoClubHouse)
     Nombre_Acudiente=models.CharField(max_length=45,null=True, blank=True)
     Correo_Acudiente=models.EmailField(null=True, blank=True)
-    Telefono_Acudiente=models.IntegerField(null=True, blank=True)
+    Telefono_Acudiente=models.CharField(max_length=15)
     Patologia_alergias= models.BooleanField(default=False)
     Descripcion_patologias_o_alergia=models.CharField(max_length=15,null=True, blank=True)
     Ruta= models.IntegerField(null=False, blank=False, choices=TipoRuta)
