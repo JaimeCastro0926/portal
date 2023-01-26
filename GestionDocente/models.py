@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 import django_filters
-
+from datetime import timezone
 
 # Create your models here.
 
@@ -133,7 +133,7 @@ class Historico(models.Model):
     Profesor = models.ForeignKey(User,on_delete=models.CASCADE,default=User)
     Estudiante=models.ForeignKey(Estudiante,on_delete=models.CASCADE)
     Fecha=models.DateField(auto_now_add=True, auto_now=False)
-    Hora = models.TimeField(auto_now_add=True, auto_now=False)
+    Hora = timezone.now()
     Clasificacion= models.IntegerField(null=False, blank=False, choices=TipoHistorico)
     Comentario_Docente=models.TextField(max_length=500,null=True, blank=True)
     Comentario_Estudiante=models.TextField(max_length=500,null=True, blank=True)
