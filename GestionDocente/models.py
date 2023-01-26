@@ -1,7 +1,8 @@
-from django.utils import timezone
+from datetime import timezone
+from django.db import models
 from django.contrib.auth.models import User
 import django_filters
-from datetime import timezone
+
 
 # Create your models here.
 
