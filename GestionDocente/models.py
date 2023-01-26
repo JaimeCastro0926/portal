@@ -46,9 +46,23 @@ TipoRestaurante =[
     (3, "Completo"),
 ]
 
+TipoClubHouse =[
+    (1, "Primaria"),
+    (2, "COCOMA"),
+    (3, "ROBOTICA"),
+    (4, "DANZAS"),
+    (5, "ONU"),
+    (6, "INGLES"),
+    (7, "FRANCES"),
+    (8, "DEPORTES"),
+    (9, "CIENCIA CON CONCIENCIA"),
+    (10, "PERIODISMO"),
+]
+
 class Estudiante(models.Model):
     Nombre=models.CharField(max_length=15)
     Apellido=models.CharField(max_length=15)
+    Numero_documento=models.PositiveIntegerField(default=8,null=True, blank=True)
     Fecha_nacimiento=models.DateField(null=True,blank=True)
     Edad=models.PositiveIntegerField(default=8,null=True, blank=True)
     Años_Antiguedad_institucion=models.PositiveIntegerField(default=1, null=True, blank=True)
@@ -58,6 +72,7 @@ class Estudiante(models.Model):
     Talento_Habilidad = models.CharField(max_length=35,null=True, blank=True)
     Deporte_Actividad = models.CharField(max_length=35,null=True, blank=True)
     Valores_que_te_identifican= models.CharField(max_length=35,null=True, blank=True)
+    Club= models.IntegerField(null=False, blank=False, choices=TipoClubHouse)
     Nombre_Acudiente=models.CharField(max_length=45,null=True, blank=True)
     Correo_Acudiente=models.EmailField(null=True, blank=True)
     Telefono_Acudiente=models.IntegerField(null=True, blank=True)
