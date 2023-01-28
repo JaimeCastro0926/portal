@@ -58,12 +58,13 @@ TipoClubHouse =[
     (8, "DEPORTES"),
     (9, "CIENCIA CON CONCIENCIA"),
     (10, "PERIODISMO"),
+    (11, "No Aplica"),
 ]
 
 class Estudiante(models.Model):
     Nombre=models.CharField(max_length=15)
     Apellido=models.CharField(max_length=15)
-    Numero_documento=models.CharField(max_length=15)
+    Numero_documento=models.CharField(max_length=15,null=True,blank=True)
     Fecha_nacimiento=models.DateField(null=True,blank=True)
     Edad=models.PositiveIntegerField(default=8,null=True, blank=True)
     Años_Antiguedad_institucion=models.PositiveIntegerField(default=1, null=True, blank=True)
@@ -76,11 +77,11 @@ class Estudiante(models.Model):
     Club= models.IntegerField(null=False, blank=False, choices=TipoClubHouse)
     Nombre_Acudiente=models.CharField(max_length=45,null=True, blank=True)
     Correo_Acudiente=models.EmailField(null=True, blank=True)
-    Telefono_Acudiente=models.CharField(max_length=15)
-    Patologia_alergias= models.BooleanField(default=False)
+    Telefono_Acudiente=models.CharField(max_length=15,null=True,blank=True)
+    Patologia_alergias= models.BooleanField(default=False,null=True,blank=True)
     Descripcion_patologias_o_alergia=models.CharField(max_length=15,null=True, blank=True)
     Ruta= models.IntegerField(null=False, blank=False, choices=TipoRuta)
-    Restaurante = models.IntegerField(null=False, blank=False, choices=TipoRuta)
+    Restaurante = models.IntegerField(null=False, blank=False, choices=TipoRestaurante)
     def __str__(self):
         return self.Nombre +" "+ self.Apellido +" "+  str(self.Curso)
 
