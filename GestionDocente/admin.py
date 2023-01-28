@@ -14,7 +14,7 @@ class ProfesAdmin(admin.ModelAdmin):
 class EstudianteVista(admin.ModelAdmin):
     list_display=("Nombre","Apellido","Curso")
     search_fields=("Curso","Nombre") 
-    list_filter = ("Apellido","Curso")
+    list_filter = ("Curso","Apellido")
     
 
 class Asignacion(admin.ModelAdmin):
