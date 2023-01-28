@@ -74,7 +74,7 @@ class Estudiante(models.Model):
     Talento_Habilidad = models.CharField(max_length=35,null=True, blank=True)
     Deporte_Actividad = models.CharField(max_length=35,null=True, blank=True)
     Valores_que_te_identifican= models.CharField(max_length=35,null=True, blank=True)
-    Club= models.IntegerField(,null=True, blank=True, choices=TipoClubHouse)
+    Club= models.IntegerField(null=True, blank=True, choices=TipoClubHouse)
     Nombre_Acudiente=models.CharField(max_length=45,null=True, blank=True)
     Correo_Acudiente=models.EmailField(null=True, blank=True)
     Telefono_Acudiente=models.CharField(max_length=15,null=True,blank=True)
