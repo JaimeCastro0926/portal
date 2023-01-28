@@ -74,14 +74,14 @@ class Estudiante(models.Model):
     Talento_Habilidad = models.CharField(max_length=35,null=True, blank=True)
     Deporte_Actividad = models.CharField(max_length=35,null=True, blank=True)
     Valores_que_te_identifican= models.CharField(max_length=35,null=True, blank=True)
-    Club= models.IntegerField(null=False, blank=False, choices=TipoClubHouse)
+    Club= models.IntegerField(,null=True, blank=True, choices=TipoClubHouse)
     Nombre_Acudiente=models.CharField(max_length=45,null=True, blank=True)
     Correo_Acudiente=models.EmailField(null=True, blank=True)
     Telefono_Acudiente=models.CharField(max_length=15,null=True,blank=True)
     Patologia_alergias= models.BooleanField(default=False,null=True,blank=True)
     Descripcion_patologias_o_alergia=models.CharField(max_length=15,null=True, blank=True)
-    Ruta= models.IntegerField(null=False, blank=False, choices=TipoRuta)
-    Restaurante = models.IntegerField(null=False, blank=False, choices=TipoRestaurante)
+    Ruta= models.IntegerField(null=True, blank=True, choices=TipoRuta)
+    Restaurante = models.IntegerField(null=True, blank=True, choices=TipoRestaurante)
     def __str__(self):
         return self.Nombre +" "+ self.Apellido +" "+  str(self.Curso)
 
