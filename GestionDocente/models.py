@@ -148,18 +148,6 @@ class Historico(models.Model):
     Evidencias = models.ImageField(upload_to="historico/",null=True,blank=True)
 
 
-class Convivencia(models.Model):
-    Profesor = models.ForeignKey(User,on_delete=models.CASCADE,default=User.USERNAME_FIELD)
-    Estudiante=models.ForeignKey(Estudiante,on_delete=models.CASCADE)
-    Fecha=models.DateField(auto_now_add=True, auto_now=False)
-    Hora = models.TimeField(auto_now_add=True, auto_now=False)
-    Comentario_Docente=models.TextField(max_length=500,null=True, blank=True)
-    Comentario_Estudiante=models.TextField(max_length=500,null=True, blank=True)
-    FaltaTipo= models.CharField(max_length=15)
-    Compromiso_de_Estudiante=models.TextField(max_length=500,null=True, blank=True)
-    Recurrente= models.BooleanField(default=False)
-    Cita_Acudientes= models.DateField(null=True)
-    Puntos_negativos=models.PositiveIntegerField(default=1)
 
 class Psicoorientacion(models.Model):
     psicoorientador = models.ForeignKey(User,on_delete=models.CASCADE,default=User)
