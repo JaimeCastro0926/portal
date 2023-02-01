@@ -1,6 +1,6 @@
 from urllib import request
 from django.contrib import admin
-from GestionDocente.models import Profesor, Asignatura, Estudiante, Curso,  Indicadores_Desempeño, Grado, Asignacion_De_Curso, Historico, Convivencia,Psicoorientacion,Listas, Notas,Llamado_lista
+from GestionDocente.models import Profesor, Asignatura, Estudiante, Curso,  Indicadores_Desempeño, Grado, Asignacion_De_Curso, Historico,Psicoorientacion,Listas, Notas,Llamado_lista
 from django.contrib.auth.models import User
 from import_export import resources
 from import_export.admin import ImportExportActionModelAdmin
@@ -47,7 +47,6 @@ class Vista_llamado(admin.ModelAdmin):
 
 
 #admin.site.register(Profesor, ProfesAdmin)
-#admin.site.register(Convivencia, ConvivenciaVista)
 admin.site.register(Grado)
 admin.site.register(Asignatura, Orden_Materias)
 admin.site.register(Curso)
