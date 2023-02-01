@@ -28,10 +28,6 @@ class HistoricoVista(admin.ModelAdmin):
     search_fields=("Nombre","Apellido") 
     list_display=("Estudiante","Fecha","Profesor")
     list_filter=("Estudiante","Fecha")
-
-class ConvivenciaVista(admin.ModelAdmin):
-    search_fields=("Nombre","Apellido") 
-    list_display=("Estudiante","Fecha","Hora","Comentario_Docente","FaltaTipo","Cita_Acudientes")
  
 class PsicoorientacionVista(admin.ModelAdmin):
     search_fields=("Nombre","Apellido") 
