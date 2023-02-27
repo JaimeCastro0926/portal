@@ -7,7 +7,12 @@ from django.views.decorators.csrf import csrf_exempt
 from django.template import RequestContext
 from django.contrib import messages
 from .form import Historicoform
-from .models import Historico
+from .models import Estudiante, Historico
+from django.views.generic import ListView, CreateView, UpdateView
+from django.urls import reverse_lazy
+from .models import Student, Branch
+from .form import StudentForm
+from django.shortcuts import render
 
 # Create your views here.
 def home(request):
@@ -112,6 +117,25 @@ def historico(request):
 
     return render(request, "GestionDocente/historico.html", data)
 
+class StudentListView(ListView):
+    model = Historico
+    form_class = Historicoform
+    context_object_name = 'students'
+
+class StudentCreateView(CreateView):
+    model = Historico
+    form_class = Historicoform
+    success_url = reverse_lazy('student_changelist')
+
+class StudentUpdateView(UpdateView):
+    model = Historico
+    form_class = Historicoform  
+    success_url = reverse_lazy('student_changelist')
+
+def load_branches(request):
+    college_id = request.GET.get('college')
+    branches = Estudiante.objects.filter(college_id=college_id).order_by('name')
+    return render(request, "GestionDocente/branch_dropdown_list_options.html", {'branches': branches})
 
 def listar_historico(request):
     lista_historico = Historico.objects.all()

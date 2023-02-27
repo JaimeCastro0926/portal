@@ -4,8 +4,6 @@ from django.contrib.auth.models import User
 import django_filters
 
 
-# Create your models here.
-
 class Profesor(models.Model):
     Nombre=models.CharField(max_length=15)
     Apellido=models.CharField(max_length=15)
@@ -134,7 +132,8 @@ Falta = [
 
 class Historico(models.Model):
     Profesor = models.ForeignKey(User,on_delete=models.CASCADE,default=User)
-    Estudiante=models.ForeignKey(Estudiante,on_delete=models.CASCADE)
+    college = models.ForeignKey(Curso, on_delete=models.SET_NULL, null=True)
+    branch = models.ForeignKey(Estudiante, on_delete=models.SET_NULL, null=True)
     Fecha=models.DateField(auto_now_add=True, auto_now=False)
     Hora = models.TimeField(auto_now_add=True, auto_now=False)
     Clasificacion= models.IntegerField(null=False, blank=False, choices=TipoHistorico)
@@ -189,3 +188,24 @@ class Llamado_lista(models.Model):
     Llego= models.BooleanField(default=False)
     Recurrente=models.BooleanField(default=False)
 
+class College(models.Model):
+    name = models.CharField(max_length=30)
+ 
+    def __str__(self):
+        return self.name
+
+class Branch(models.Model):
+    college = models.ForeignKey(College, on_delete=models.CASCADE)
+    name = models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.name
+
+class Student(models.Model):
+    name = models.CharField(max_length=100)
+    birthdate = models.DateField(null=True, blank=True)
+    college = models.ForeignKey(Curso, on_delete=models.SET_NULL, null=True)
+    branch = models.ForeignKey(Estudiante, on_delete=models.SET_NULL, null=True)
+
+    def __str__(self):
+        return self.name 

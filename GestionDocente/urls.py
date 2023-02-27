@@ -23,7 +23,11 @@ urlpatterns = [
     path('natacion', views.natacion, name="natacion"),
     path('rutas', views.rutas, name="rutas"),
     path('restaurante', views.restaurante, name="restaurante"),
-   
+    path('', views.StudentListView.as_view(), name='student_changelist'),
+    path('add/', views.StudentCreateView.as_view(), name='student_add'),
+    path('<int:pk>/', views.StudentUpdateView.as_view(), name='student_change'),
+    path('ajax/load-branches/', views.load_branches, name='ajax_load_branches'),
+
 
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

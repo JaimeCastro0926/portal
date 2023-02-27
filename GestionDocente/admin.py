@@ -4,7 +4,7 @@ from GestionDocente.models import Profesor, Asignatura, Estudiante, Curso,  Indi
 from django.contrib.auth.models import User
 from import_export import resources
 from import_export.admin import ImportExportActionModelAdmin
-
+from .models import Student, College, Branch
 # Register your models here.
 
 class ProfesAdmin(admin.ModelAdmin):
@@ -26,8 +26,8 @@ class Orden_Materias(admin.ModelAdmin):
 
 class HistoricoVista(admin.ModelAdmin):
     search_fields=("Nombre","Apellido") 
-    list_display=("Estudiante","Fecha","Profesor")
-    list_filter=("Estudiante","Fecha")
+    list_display=("branch","Fecha","Profesor")
+    list_filter=("branch","Fecha")
  
 class PsicoorientacionVista(admin.ModelAdmin):
     search_fields=("Nombre","Apellido") 
@@ -58,5 +58,9 @@ admin.site.register(Psicoorientacion, PsicoorientacionVista)
 admin.site.register(Listas)
 admin.site.register(Notas,Vista_notas)
 admin.site.register(Llamado_lista,Vista_llamado)
+admin.site.register(Student)
+admin.site.register(College)
+admin.site.register(Branch)
+# Register your models here.
 
 
