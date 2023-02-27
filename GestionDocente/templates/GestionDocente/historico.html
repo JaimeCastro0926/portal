@@ -9,13 +9,35 @@
     </div>
     <h2 style="color: white;font-size: 2cm;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">  Historico </h2>
     <br>
-    <form action="" class="formulario_historico" method="post" style="color: white;" enctype="multipart/form-data">
-    {% csrf_token %}
+
+    <form class="formulario_historico" style="color: white;" enctype="multipart/form-data" method="post" id="studentForm" data-branches-url="{% url 'ajax_load_branches' %}" novalidate>
+      {% csrf_token %}
     
     {{formhistorico | crispy}}
     <button type="submit" class="btn btn-succes"> Enviar </button >
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+    $("#id_college").change(function () {
+      var url = $("#studentForm").attr("data-branches-url");  
+      var collegeId = $(this).val();  
+
+      $.ajax({                      
+        url: url,                    
+        data: {
+          'college': collegeId       
+        },
+        success: function (data) {  
+          $("#id_branch").html(data);  
+        }
+      });
+
+    });
+  </script>
     </form>
+
     {{mensaje}}
 
   </div>
