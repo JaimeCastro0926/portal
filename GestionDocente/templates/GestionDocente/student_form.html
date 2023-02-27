@@ -1,0 +1,37 @@
+{% extends "GestionDocente/base.html"%}
+
+{% block content %}
+
+  <h2>Student Form</h2>
+
+  <form method="post" id="studentForm" data-branches-url="{% url 'ajax_load_branches' %}" novalidate>
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="<button class="btn btn-link" > BUSCAR <span class="badge bg-primary">  </span>
+    </button>
+    <a href="{% url 'historico'%}"> LLENAR HISTORICO </a>
+  </form>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+    $("#id_college").change(function () {
+      var url = $("#studentForm").attr("data-branches-url");  
+      var collegeId = $(this).val();  
+
+      $.ajax({                      
+        url: url,                    
+        data: {
+          'college': collegeId       
+        },
+        success: function (data) {  
+          $("#id_branch").html(data);  
+        }
+      });
+
+    });
+  </script>
+
+
+{% endblock %}
