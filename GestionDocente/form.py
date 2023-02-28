@@ -25,7 +25,6 @@ class Historicoform(forms.ModelForm):
         model = Historico
         fields = '__all__'
         file = forms.FileField()
-        exclude = ('Puntos_negativos',)
         widgets = {
             "Cita_Acudientes": forms.SelectDateWidget()
         }
