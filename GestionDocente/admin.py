@@ -27,8 +27,8 @@ class Orden_Materias(admin.ModelAdmin):
 class HistoricoVista(admin.ModelAdmin):
     search_fields=("Nombre","Apellido") 
     list_display=("branch","Fecha","Profesor")
-    list_filter=("branch","Fecha")
- 
+    list_filter=("college","Fecha")
+  
 class PsicoorientacionVista(admin.ModelAdmin):
     search_fields=("Nombre","Apellido") 
     list_display=("Estudiante","Fecha","Hora","psicoorientador","Proxima_cita")
