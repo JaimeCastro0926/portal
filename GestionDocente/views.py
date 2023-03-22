@@ -70,6 +70,8 @@ def club(request):
 def einformacion(request):    
     return render(request, "GestionDocente/einformacion.html")
 
+def organigrama(request):    
+    return render(request, "GestionDocente/organigrama.html")
 
 class Vregistro(View):    
     def get(self, request):
