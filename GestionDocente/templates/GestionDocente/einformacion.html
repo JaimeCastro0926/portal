@@ -3,7 +3,7 @@
 {%block content %}
 
    <!-- Heading -->
-   <section class="page-section clearfix">
+   <!-- <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
         <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static 'GestionDocente/img/imagen12.jpg'%}" alt="">
@@ -18,10 +18,10 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
         <!-- Message -->
-        <section class="page-section cta" style="background-color: gold;">
+        <section class="page-section cta" style="background-color: rgba(255, 217, 0, 0);">
           <div class="container">
             <div class="row" >
               <div class="col-xl-12 mx-auto">
@@ -43,10 +43,8 @@
 
 
 
-</div>
-</section>
 
-<section class="page-section cta" style="background-color: gold;">
+<section class="page-section cta" style="background-color: rgba(255, 217, 0, 0);">
   <div class="container">
     <div class="row" >
       <div class="col-xl-12 mx-auto">
@@ -58,16 +56,338 @@
       </div>
     </div>
   </div>
-          <br>
-           <br>
-           <center><h2 class="section-heading-lower" style="color: rgb(255, 255, 255); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 1cm;" > INTEGRANDO PADRES FEBRERO 24  </h2></center>
-           <center><a href="https://youtu.be/hnUCTDraOi0" target="_blank" rel="noopener noreferrer" class="btn btn-primary" > Ver video INTEGRANDO PADRES FEBRERO 24 </a></center>
-           <br>
-           <br>
-           <center><h2 class="section-heading-lower" style="color: rgb(255, 255, 255); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-size: 1cm;" > INTEGRANDO PADRES MARZO 3  </h2></center>
-           <center><a href="https://youtu.be/nw-RY2Na48k" target="_blank" rel="noopener noreferrer" class="btn btn-primary" > Ver video INTEGRANDO PADRES MARZO 3 </a></center>
-           <br>
-           <br>
 </section>
+
+
+<div class="card-deck">
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen5.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <P class="card-title" style="font-size: small;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">PREJARDIN</P>
+        <a href="https://drive.google.com/drive/folders/15FHwq6PuEO3f6PqXvAKsVHUQ6_cvUb4U?usp=share_link" target="_blank" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen6.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> JARDIN </h5>
+           <a href="{% url 'gestion'%}" class="btn btn-primary"> Ver </a> 
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> TRA 1 </h5>
+       <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> TRA 2 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver </a>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+<br>
+
+
+<div class="card-deck">
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">  101 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen5.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <P class="card-title" style="font-size: small;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">102</P>
+        <a href="{% url 'historico'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen6.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 103 </h5>
+           <a href="{% url 'gestion'%}" class="btn btn-primary"> Ver </a> 
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 104 </h5>
+       <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 105 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver </a>
+    </div>
+  </div>
+
+
+</div>
+
+
+<br>
+
+
+<div class="card-deck">
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">  201 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen5.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <P class="card-title" style="font-size: small;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">202</P>
+        <a href="{% url 'historico'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen6.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 203 </h5>
+           <a href="{% url 'gestion'%}" class="btn btn-primary"> Ver </a> 
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 301 </h5>
+       <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 302 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver </a>
+    </div>
+  </div>
+
+
+</div>
+
+
+<br>
+
+<div class="card-deck">
+  
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">  401 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen5.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <P class="card-title" style="font-size: small;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">402</P>
+        <a href="{% url 'historico'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen6.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 403 </h5>
+           <a href="{% url 'gestion'%}" class="btn btn-primary"> Ver </a> 
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 501 </h5>
+       <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 502 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver </a>
+    </div>
+  </div>
+
+
+</div>
+
+
+<br>
+
+<div class="card-deck">
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">  601 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen5.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <P class="card-title" style="font-size: small;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">602</P>
+        <a href="{% url 'historico'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen6.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 603 </h5>
+           <a href="{% url 'gestion'%}" class="btn btn-primary"> Ver </a> 
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 701 </h5>
+       <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 702 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver </a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">  703 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+</div>
+
+
+<br>
+
+<div class="card-deck">
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen5.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <P class="card-title" style="font-size: small;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">801</P>
+        <a href="{% url 'historico'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen6.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 802 </h5>
+           <a href="{% url 'gestion'%}" class="btn btn-primary"> Ver </a> 
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 901 </h5>
+       <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 902 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver </a>
+    </div>
+  </div>
+
+
+
+</div>
+
+
+<br>
+
+<div class="card-deck">
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">  1001 </h5>
+      <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen5.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <P class="card-title" style="font-size: small;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">1002</P>
+        <a href="{% url 'historico'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen6.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 1101 </h5>
+           <a href="{% url 'gestion'%}" class="btn btn-primary"> Ver </a> 
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; ;">
+    <img class="card-img-top" src="{% static 'GestionDocente/img/imagen19.jpg'%}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title" style="font-size: larger;color: blue;font-size: 1cm;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> 1102 </h5>
+       <a href="{% url 'club'%}" class="btn btn-primary">Ver</a>
+    </div>
+  </div>
+
+  
+
+
+</div>
+
+
+<br>
+
 
 {%endblock%}
