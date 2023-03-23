@@ -73,6 +73,9 @@ def einformacion(request):
 def organigrama(request):    
     return render(request, "GestionDocente/organigrama.html")
 
+def red(request):    
+    return render(request, "GestionDocente/red.html")
+
 class Vregistro(View):    
     def get(self, request):
         form = UserCreationForm()
