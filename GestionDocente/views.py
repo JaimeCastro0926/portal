@@ -76,6 +76,9 @@ def organigrama(request):
 def red(request):    
     return render(request, "GestionDocente/red.html")
 
+def egaleria(request):    
+    return render(request, "GestionDocente/egaleria.html")
+
 class Vregistro(View):    
     def get(self, request):
         form = UserCreationForm()
