@@ -12,7 +12,7 @@ class ProfesAdmin(admin.ModelAdmin):
     search_fields=("Nombre","Apellido") 
 
 class EstudianteVista(admin.ModelAdmin):
-    list_display=("Nombre","Apellido","Curso")
+    list_display=("Apellido","Nombre","Curso")
     search_fields=("Curso","Nombre") 
     list_filter = ("Curso","Apellido")
     
