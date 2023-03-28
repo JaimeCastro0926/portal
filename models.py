@@ -199,7 +199,7 @@ class Branch(models.Model):
     name = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name
+        return self.Apellido +" "+ self.Nombre+" "+  str(self.Curso)
 
 class Student(models.Model):
     name = models.CharField(max_length=100)
