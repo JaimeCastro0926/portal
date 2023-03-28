@@ -81,7 +81,7 @@ class Estudiante(models.Model):
     Ruta= models.IntegerField(null=True, blank=True, choices=TipoRuta)
     Restaurante = models.IntegerField(null=True, blank=True, choices=TipoRestaurante)
     def __str__(self):
-        return self.Nombre +" "+ self.Apellido+" "+  str(self.Curso)
+        return self.Apellido +" "+ self.Nombre+" "+  str(self.Curso)
 
 
 class Listas(models.Model):
